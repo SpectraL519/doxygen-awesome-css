@@ -8,6 +8,9 @@ Copyright (c) 2021 - 2025 jothepro
 
 */
 
+/* Required for postprocessing */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 html {
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
     --primary-color: #1779c4;
@@ -3012,7 +3015,7 @@ h2:hover a.anchorlink, h1:hover a.anchorlink, h3:hover a.anchorlink, h4:hover a.
     }
 }
 
-/* 
+/*
  Bordered image
 */
 
@@ -3053,4 +3056,47 @@ html.dark-mode .bordered_image object[type="image/svg+xml"] /* doxygen 1.9.3 */ 
 
 .primary-button:hover {
     background: var(--primary-dark-color);
+}
+
+/* --- SpectraL519 custom overrides --- */
+
+.fa {
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+.fa:hover {
+  transform: scale(1.2);
+}
+
+/* Reduce padding around the title area */
+#titlearea {
+  padding: 0.2em 0 !important;
+}
+#titlearea table {
+  margin: 0 !important;
+}
+
+/* Reduce projectrow cell padding */
+#projectrow td {
+  padding: 0.2em 0.6em !important;
+  vertical-align: middle !important;
+}
+
+/* Constrain logo height */
+#projectlogo img {
+  max-height: 90px;
+  width: auto;
+  display: block;
+}
+
+/* Tighten project name & brief spacing */
+#projectname {
+  font-size: 1.6em;
+  line-height: 1.1em;
+  margin: 0 !important;
+}
+#projectbrief {
+  font-size: 0.9em;
+  line-height: 1.1em;
+  margin: 0 !important;
 }
