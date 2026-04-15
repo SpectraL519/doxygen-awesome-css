@@ -8,6 +8,9 @@ Copyright (c) 2021 - 2025 jothepro
 
 */
 
+/* Required for postprocessing */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 html {
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
     --primary-color: #1779c4;
@@ -195,7 +198,7 @@ html {
         --section-code-border: rgba(255, 255, 255, 0.18);
 
         --tablehead-background: #2a2c2f;
-    
+
         --blockquote-background: #222325;
         --blockquote-foreground: #7e8c92;
 
@@ -1009,7 +1012,7 @@ div.header {
         flex-wrap: nowrap;
         align-items: flex-start;
     }
-    
+
     div.contents .textblock {
         min-width: 200px;
         flex-grow: 1;
@@ -1112,21 +1115,21 @@ html.dark-mode div.contents .dotgraph iframe
 td h2.groupheader, h2.groupheader {
     border-bottom: 0px;
     color: var(--page-foreground-color);
-    box-shadow: 
-        100px 0 var(--page-background-color), 
+    box-shadow:
+        100px 0 var(--page-background-color),
         -100px 0 var(--page-background-color),
         100px 0.75px var(--separator-color),
         -100px 0.75px var(--separator-color),
-        500px 0 var(--page-background-color), 
+        500px 0 var(--page-background-color),
         -500px 0 var(--page-background-color),
         500px 0.75px var(--separator-color),
         -500px 0.75px var(--separator-color),
-        900px 0 var(--page-background-color), 
+        900px 0 var(--page-background-color),
         -900px 0 var(--page-background-color),
         900px 0.75px var(--separator-color),
         -900px 0.75px var(--separator-color),
         1400px 0 var(--page-background-color),
-        -1400px 0 var(--page-background-color), 
+        -1400px 0 var(--page-background-color),
         1400px 0.75px var(--separator-color),
         -1400px 0.75px var(--separator-color),
         1900px 0 var(--page-background-color),
@@ -1155,6 +1158,7 @@ blockquote::before, blockquote::after {
     position: absolute;
 }
 
+/*
 blockquote::before {
     content: "“";
     left: -10px;
@@ -1166,6 +1170,7 @@ blockquote::after {
     right: -8px;
     bottom: -25px;
 }
+*/
 
 blockquote p {
     margin: var(--spacing-small) 0 var(--spacing-medium) 0;
@@ -1297,8 +1302,8 @@ div.toc li a.aboveActive {
 
     div.contents .toc.interactive > h3::before {
         content: "";
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
         border-top: 5px solid var(--primary-color);
@@ -2156,8 +2161,8 @@ table.memberdecls img[src="closed.png"],
 table.memberdecls img[src="open.png"],
 div.dynheader img[src="open.png"],
 div.dynheader img[src="closed.png"] {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 5px solid var(--primary-color);
@@ -2179,7 +2184,7 @@ table.memberdecls img {
 table.memberdecls img[src="closed.png"],
 div.dynheader img[src="closed.png"] {
     transform: rotate(-90deg);
-    
+
 }
 
 .compoundTemplParams {
@@ -2227,7 +2232,7 @@ div.dynheader img[src="closed.png"] {
         margin-bottom: calc(0px - var(--page-font-size));
     }
 
-    table.memberdecls .memItemRight, 
+    table.memberdecls .memItemRight,
     table.memberdecls .mdescRight,
     table.memberdecls .memTemplItemRight,
     table.memberdecls .template .memItemRight {
@@ -2310,7 +2315,7 @@ hr {
                 1400px 0 var(--separator-color),
                 -1400px 0 var(--separator-color),
                 1900px 0 var(--separator-color),
-                -1900px 0 var(--separator-color);       
+                -1900px 0 var(--separator-color);
 }
 
 .contents img, .contents .center, .contents center, .contents div.image object {
@@ -2433,8 +2438,8 @@ html.dark-mode .iconfopen, html.dark-mode .iconfclosed {
     background-color: transparent;
 }
 
-/* 
- Class Index Doxygen 1.8 
+/*
+ Class Index Doxygen 1.8
 */
 
 table.classindex {
@@ -2599,7 +2604,7 @@ div.contents .toc::-webkit-scrollbar-thumb,
     background-color: transparent;
     border: var(--webkit-scrollbar-padding) solid transparent;
     border-radius: calc(var(--webkit-scrollbar-padding) + var(--webkit-scrollbar-padding));
-    background-clip: padding-box;  
+    background-clip: padding-box;
 }
 
 #nav-tree:hover::-webkit-scrollbar-thumb,
@@ -2847,7 +2852,7 @@ h2:hover a.anchorlink, h1:hover a.anchorlink, h3:hover a.anchorlink, h4:hover a.
     cursor: pointer;
     box-shadow: 0 1px 0 0 var(--separator-color);
     position: relative;
-    
+
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -3010,7 +3015,7 @@ h2:hover a.anchorlink, h1:hover a.anchorlink, h3:hover a.anchorlink, h4:hover a.
     }
 }
 
-/* 
+/*
  Bordered image
 */
 
@@ -3051,4 +3056,47 @@ html.dark-mode .bordered_image object[type="image/svg+xml"] /* doxygen 1.9.3 */ 
 
 .primary-button:hover {
     background: var(--primary-dark-color);
+}
+
+/* --- SpectraL519 custom overrides --- */
+
+.fa {
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+.fa:hover {
+  transform: scale(1.2);
+}
+
+/* Reduce padding around the title area */
+#titlearea {
+  padding: 0.2em 0 !important;
+}
+#titlearea table {
+  margin: 0 !important;
+}
+
+/* Reduce projectrow cell padding */
+#projectrow td {
+  padding: 0.2em 0.6em !important;
+  vertical-align: middle !important;
+}
+
+/* Constrain logo height */
+#projectlogo img {
+  max-height: 90px;
+  width: auto;
+  display: block;
+}
+
+/* Tighten project name & brief spacing */
+#projectname {
+  font-size: 1.6em;
+  line-height: 1.1em;
+  margin: 0 !important;
+}
+#projectbrief {
+  font-size: 0.9em;
+  line-height: 1.1em;
+  margin: 0 !important;
 }
